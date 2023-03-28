@@ -63,6 +63,6 @@ export class StudentRedgComponent implements OnInit {
       },
     });
 
-    console.log('Request sent');
+    console.log('Requestsent');
   }
 }

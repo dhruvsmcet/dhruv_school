@@ -1,0 +1,120 @@
+<div class="container">
+  <h2>Student's Registration</h2>
+  <div class="form">
+    <div class="row">
+      <div class="col">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Student name"
+          [(ngModel)]="student.fname"
+        />
+      </div>
+      <div class="col">
+        <select
+          class="form-control"
+          [(ngModel)]="student.Class"
+          (change)="getClassSections()"
+        >
+          <option value="0">Select class</option>
+          <option *ngFor="let class of classes" value="{{ class.class_id }}">
+            {{ class.class_name }}
+          </option>
+        </select>
+        <!-- <input
+          type="text"
+          class="form-control"
+          placeholder="class"
+          [(ngModel)]="student.Class"
+        /> -->
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <select class="form-control" [(ngModel)]="student.Section">
+          <option value="">Select section</option>
+          <option
+            *ngFor="let section of classSections"
+            value="section.section_id"
+          >
+            {{ section.section_name }}
+          </option>
+        </select>
+        <!-- <input
+          type="text"
+          class="form-control"
+          placeholder="Section"
+          [(ngModel)]="student.Section"
+        /> -->
+      </div>
+      <div class="col">
+        <input
+          type="date"
+          class="form-control"
+          placeholder="YYYY-MM-DD"
+          [(ngModel)]="student.Dob"
+        />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Height"
+          [(ngModel)]="student.Height"
+        />
+      </div>
+      <div class="col">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Weight"
+          [(ngModel)]="student.Weight"
+        />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Gender"
+          [(ngModel)]="student.Gender"
+        />
+      </div>
+      <div class="col">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="identificationMark"
+          [(ngModel)]="student.identificationMark"
+        />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Academic Year"
+          [(ngModel)]="student.academicYear"
+        />
+      </div>
+      <div class="col">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="roll.no"
+          [(ngModel)]="student.roll"
+        />
+      </div>
+    </div>
+
+    <button (click)="registerStudents()" class="btn btn-primary">Submit</button>
+  </div>
+</div>

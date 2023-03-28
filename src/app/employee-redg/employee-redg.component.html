@@ -1,0 +1,97 @@
+<div class="form">
+  <div class="row">
+    <div class="col">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Employee name"
+        [(ngModel)]="employee.fullname"
+      />
+    </div>
+    <div class="col">
+      <input
+        type="text"
+        class="form-control"
+        placeholder=" Employee id"
+        [(ngModel)]="employee.empid"
+      />
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Contact no."
+        [(ngModel)]="employee.contact"
+      />
+    </div>
+    <div class="col">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Father's name"
+        [(ngModel)]="employee.fathername"
+      />
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Email id"
+        [(ngModel)]="employee.email"
+      />
+    </div>
+    <div class="col">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Date of birth"
+        [(ngModel)]="employee.dob"
+      />
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Date of Joining"
+        [(ngModel)]="employee.doj"
+      />
+    </div>
+    <div class="col">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Designation"
+        [(ngModel)]="employee.designation"
+      />
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Employee Salary"
+        [(ngModel)]="employee.empsalary"
+      />
+    </div>
+    <div class="col">
+      <input
+        type="text"
+        class="form-control"
+        placeholder=" Employee attendance"
+        [(ngModel)]="employee.empattd"
+      />
+    </div>
+  </div>
+  <button (click)="registerEmployee()" class="btn btn-primary">Submit</button>
+</div>

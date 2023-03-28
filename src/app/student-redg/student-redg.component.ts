@@ -52,7 +52,7 @@ export class StudentRedgComponent implements OnInit {
       });
   }
   registerStudents() {
-    console.log('register Students');
+    console.log('registerStudents');
 
     this.apiService.doPostRequest('student_register', this.student).subscribe({
       next: (data) => {
